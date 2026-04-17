@@ -1,6 +1,6 @@
 import os
 from cv2 import imread as read_image
-from utils.ansi import RED, RESET
+from ansi import RED, RESET
 
 class ImageLoader :
 
