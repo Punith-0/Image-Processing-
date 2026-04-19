@@ -1,7 +1,7 @@
 import os
 from cv2 import imread as read_image
 from cv2 import imwrite as save_image
-from ansi import RED, RESET , GREEN , BOLD
+from .ansi import RED, RESET , GREEN , BOLD
 
 class ImageLoader :
 
@@ -40,14 +40,14 @@ class ImageSaver :
     def __init__(self , output_folder = "output_folder"):
         self.output_folder = output_folder
     
-    def save_images_into_folder(self, images ):
+    def save_images_into_folder(self, images  , prefix = ""):
         os.makedirs(self.output_folder , exist_ok = True)
 
         for filename , image in images :
             name , extension = os.path.splitext(filename)
             if extension == "" :
                 extension = ".jpg"
-            save_path = os.path.join(self.output_folder , f"{name}{extension}")
+            save_path = os.path.join(self.output_folder , f"{prefix}{name}{extension}")
 
             save_done = save_image(save_path , image)
 
