@@ -3,6 +3,8 @@ from utils.file_operations import ImageLoader  , ImageSaver
 from classify_region import ClassifierModel
 from vegetaive_indices import VegetationIndices
 import os 
+import numpy as np
+import subprocess , sys
 
 def main() :
     print(f"{BOLD}{BLUE}----VEGETATION ANALYZER----{RESET}")
@@ -26,6 +28,7 @@ def main() :
         try :
             ndvi = VegetationIndices.compute_ndvi(image)
             ndvi[ndvi <= -0.2] = -1
+            ndvi = np.round(ndvi, 2)
             ndvi_img = VegetationIndices.normalize_index(ndvi)
             model.tune_thresholds(ndvi)
             region = model.classify(ndvi)
@@ -36,10 +39,13 @@ def main() :
             continue
     
     print(f"{GREEN}Processing Finished{RESET}")
-    saver.save_images_into_folder(ndvi_outputs , prefix = "ndvi_")
+    # saver.save_images_into_folder(ndvi_outputs , prefix = "ndvi_")
     saver.save_images_into_folder(region_outputs , prefix = "region_")
     
     print(f"{BOLD}{GREEN}Processing complete. Check the '{output_path}' folder for results.{RESET}")
+    # os.system("python metrics.py") depeciated
+    subprocess.run([sys.executable, "metrics.py"])
+    print(f"{BOLD}{GREEN}Metrics computed and report generated.{RESET}")
 
 if __name__ == "__main__" :
     main()
