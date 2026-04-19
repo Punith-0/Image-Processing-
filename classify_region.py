@@ -26,7 +26,7 @@ class ClassifierModel :
     def threshold(self  , water = 0.0 , soil = 0.2 , grass = 0.5) :
         self.thresholds['water'] = water
         self.thresholds['soil'] = soil
-        self.threshhlds['grass'] = grass
+        self.thresholds['grass'] = grass
 
     def classify(self , ndvi ):
         if len(ndvi.shape) != 2:
@@ -34,10 +34,14 @@ class ClassifierModel :
         h , w = ndvi.shape
         output = np.zeros((h , w , 3) , dtype=np.uint8) #bug fix (h , w) -> (h , w , 3) for color output
         t = self.thresholds
-        output[ndvi < t["water"]] = [255 , 0 ,  0]
-        output[(ndvi >= t["water"]) & (ndvi < t["soil"])] = [42 , 42 , 165]
-        output[(ndvi >= t['soil']) & (ndvi < t['grass'])] = [144 , 238 , 144]
-        output[ndvi >= t['grass']] = [0 , 100 ,  0]
+        margin = 0.05
+        water_t = t["water"]
+        soil_t = t["soil"]
+        grass_t = t["grass"]
+        output[ndvi < (water_t - margin)] = [255 , 0 , 0]
+        output[(ndvi >= (water_t - margin)) & (ndvi < (soil_t + margin))] = [42 , 42 , 165]
+        output[(ndvi >= (soil_t + margin)) & (ndvi < (grass_t + margin))] = [144 , 238 , 144]
+        output[ndvi >= (grass_t + margin)] = [0 , 100  , 0]
         return output
     
     def show_thresholds(self) :
