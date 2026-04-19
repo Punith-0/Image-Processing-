@@ -44,7 +44,9 @@ class VegetationIndices :
             b , g , r = cv2.split(image)
             up = g - r
             down = g + r +1e-5
-        return (up/down)
+        ndvi = (up/down)
+        ndvi = cv2.GaussianBlur(ndvi, (5, 5), 0)
+        return ndvi
     
     @staticmethod
     def normalize_index(index) :
