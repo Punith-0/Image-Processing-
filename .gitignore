@@ -3,3 +3,4 @@ __init__.py
 .venv
 *.txt
 !requirements.txt
+!metrics_report.txt
