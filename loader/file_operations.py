@@ -1,7 +1,7 @@
 import os
 from cv2 import imread as read_image
 from cv2 import imwrite as save_image
-from .ansi import RED, RESET , GREEN , BOLD
+from utils.ansi import RED, RESET , GREEN , BOLD
 
 class ImageLoader :
 

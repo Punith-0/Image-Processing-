@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 
-OUTPUT_FOLDER = "output_folder"
+OUTPUT_FOLDER = os.path.join("output", "output_folder")
 REPORT_FILE = os.path.join(OUTPUT_FOLDER, "metrics_report.txt")
 
 

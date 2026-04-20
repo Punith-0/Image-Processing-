@@ -1,15 +1,15 @@
 from utils.ansi import RED , GREEN , BOLD , YELLOW , HIGHLIGHT , RESET  , BLUE , CYAN
-from utils.file_operations import ImageLoader  , ImageSaver
-from classify_region import ClassifierModel
-from vegetaive_indices import VegetationIndices
+from loader.file_operations import ImageLoader  , ImageSaver
+from scripts.classify_region import ClassifierModel
+from scripts.vegetaive_indices import VegetationIndices
 import os 
 import numpy as np
 import subprocess , sys
 
 def main() :
     print(f"{BOLD}{BLUE}----VEGETATION ANALYZER----{RESET}")
-    input_path = "input_folder"
-    output_path = "output_folder"
+    input_path = os.path.join("data", "input_folder")
+    output_path = os.path.join("output", "output_folder")
     os.makedirs(input_path, exist_ok=True)
     os.makedirs(output_path, exist_ok=True)
     loader = ImageLoader(input_path)
@@ -44,7 +44,7 @@ def main() :
     
     print(f"{BOLD}{GREEN}Processing complete. Check the '{output_path}' folder for results.{RESET}")
     # os.system("python metrics.py") depeciated
-    subprocess.run([sys.executable, "metrics.py"])
+    subprocess.run([sys.executable, "scripts/metrics.py"])
     print(f"{BOLD}{GREEN}Metrics computed and report generated.{RESET}")
 
 if __name__ == "__main__" :

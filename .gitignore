@@ -2,5 +2,4 @@ __pycache__
 __init__.py
 .venv
 *.txt
-input_folder/
-output_folder/
+!requirements.txt
