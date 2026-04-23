@@ -8,6 +8,10 @@ import subprocess , sys
 
 def main() :
     print(f"{BOLD}{BLUE}----VEGETATION ANALYZER----{RESET}")
+    interactive = int(input("Want a interactive experience ? If yes , enter 1 else 0: "))
+    if interactive == 1:
+        subprocess.run([ "streamlit", "run", "app.py"])
+        return
     input_path = os.path.join("data", "input_folder")
     output_path = os.path.join("output", "output_folder")
     os.makedirs(input_path, exist_ok=True)
