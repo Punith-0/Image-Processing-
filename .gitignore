@@ -4,4 +4,3 @@ __init__.py
 *.txt
 !requirements.txt
 !metrics_report.txt
-app.py
