@@ -1,8 +1,0 @@
-VEGETATION METRICS REPORT
-========================================
-
-Image: region_img2.jpg
-water_%: 2.56%
-soil_%: 24.08%
-grass_%: 1.59%
-dense_veg_%: 1.31%
