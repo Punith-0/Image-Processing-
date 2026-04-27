@@ -1,6 +1,7 @@
 import os
 from cv2 import imread as read_image
 from cv2 import imwrite as save_image
+import cv2
 from utils.ansi import RED, RESET , GREEN , BOLD
 
 class ImageLoader :
@@ -22,8 +23,8 @@ class ImageLoader :
                 print(f"{RED}Skipping the sub_directory: {file_path}{RESET}")
                 continue
 
-            if filename.lower().endswith((".jpg", ".png", ".jpeg")):
-                img = read_image(file_path)
+            if filename.lower().endswith((".jpg", ".png", ".jpeg" , ".tiff" , "tif")):
+                img = read_image(file_path , cv2.IMREAD_UNCHANGED)
 
                 """self.images.append((filename, img)) \
                     if img is not None \
