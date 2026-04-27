@@ -1,0 +1,9 @@
+__pycache__
+__init__.py
+.venv
+*.txt
+!requirements.txt
+!metrics_report.txt
+save_image.py
+input_folder_tiff/
+output_folder_png/
