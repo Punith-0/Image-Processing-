@@ -1,0 +1,122 @@
+VEGETATION METRICS REPORT
+========================================
+
+Image: region_sentinel_amazon.tif
+water_%: 6.09%
+soil_%: 63.08%
+grass_%: 30.83%
+dense_veg_%: 0.0%
+
+Image: region_sentinel_amazon_1.tif
+water_%: 5.58%
+soil_%: 72.49%
+grass_%: 21.93%
+dense_veg_%: 0.0%
+
+Image: region_sentinel_bangladesh_delta.tif
+water_%: 3.19%
+soil_%: 68.79%
+grass_%: 19.7%
+dense_veg_%: 8.31%
+
+Image: region_sentinel_black_forest.tif
+water_%: 4.05%
+soil_%: 67.52%
+grass_%: 20.57%
+dense_veg_%: 7.86%
+
+Image: region_sentinel_brazil_agri.tif
+water_%: 10.35%
+soil_%: 44.38%
+grass_%: 42.33%
+dense_veg_%: 2.94%
+
+Image: region_sentinel_canada_forest.tif
+water_%: 5.87%
+soil_%: 73.26%
+grass_%: 16.87%
+dense_veg_%: 4.0%
+
+Image: region_sentinel_china_farmland.tif
+water_%: 3.88%
+soil_%: 66.31%
+grass_%: 17.94%
+dense_veg_%: 11.87%
+
+Image: region_sentinel_congo.tif
+water_%: 0.37%
+soil_%: 92.26%
+grass_%: 5.98%
+dense_veg_%: 1.4%
+
+Image: region_sentinel_himachal_forest.tif
+water_%: 10.11%
+soil_%: 57.54%
+grass_%: 29.37%
+dense_veg_%: 2.99%
+
+Image: region_sentinel_himalayas.tif
+water_%: 0.88%
+soil_%: 83.58%
+grass_%: 12.02%
+dense_veg_%: 3.52%
+
+Image: region_sentinel_kerala_backwaters.tif
+water_%: 12.9%
+soil_%: 37.3%
+grass_%: 47.21%
+dense_veg_%: 2.58%
+
+Image: region_sentinel_madagascar.tif
+water_%: 1.03%
+soil_%: 89.58%
+grass_%: 7.64%
+dense_veg_%: 1.75%
+
+Image: region_sentinel_mekong_delta.tif
+water_%: 16.87%
+soil_%: 30.43%
+grass_%: 51.63%
+dense_veg_%: 1.07%
+
+Image: region_sentinel_multispectral.tif
+water_%: 13.53%
+soil_%: 34.0%
+grass_%: 52.26%
+dense_veg_%: 0.22%
+
+Image: region_sentinel_new_zealand.tif
+water_%: 18.31%
+soil_%: 11.77%
+grass_%: 62.52%
+dense_veg_%: 7.4%
+
+Image: region_sentinel_patagonia.tif
+water_%: 2.81%
+soil_%: 70.47%
+grass_%: 6.5%
+dense_veg_%: 20.22%
+
+Image: region_sentinel_punjab_fields.tif
+water_%: 3.31%
+soil_%: 86.87%
+grass_%: 9.42%
+dense_veg_%: 0.41%
+
+Image: region_sentinel_swiss_alps.tif
+water_%: 9.38%
+soil_%: 33.8%
+grass_%: 55.62%
+dense_veg_%: 1.2%
+
+Image: region_sentinel_western_ghats.tif
+water_%: 4.4%
+soil_%: 76.67%
+grass_%: 18.0%
+dense_veg_%: 0.92%
+
+Image: region_sentinel_yellowstone.tif
+water_%: 11.33%
+soil_%: 39.83%
+grass_%: 43.5%
+dense_veg_%: 5.34%
